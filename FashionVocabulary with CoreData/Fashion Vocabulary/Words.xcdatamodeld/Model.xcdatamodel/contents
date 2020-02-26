@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="WordEntity" representedClassName="WordEntity" syncable="YES">
+        <attribute name="belarusianDefinition" optional="YES" attributeType="String"/>
+        <attribute name="belarusianWord" optional="YES" attributeType="String"/>
+        <attribute name="englishDefinition" optional="YES" attributeType="String"/>
+        <attribute name="englishWord" optional="YES" attributeType="String"/>
+        <attribute name="wordImage" optional="YES" attributeType="Binary"/>
+        <relationship name="wordArrayEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WordsArrayEntity" inverseName="wordEntities" inverseEntity="WordsArrayEntity"/>
+    </entity>
+    <entity name="WordsArrayEntity" representedClassName="WordsArrayEntity" syncable="YES">
+        <attribute name="arrayName" optional="YES" attributeType="String"/>
+        <relationship name="wordEntities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="wordArrayEntity" inverseEntity="WordEntity"/>
+    </entity>
+    <elements>
+        <element name="WordEntity" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="WordsArrayEntity" positionX="-54" positionY="-9" width="128" height="73"/>
+    </elements>
+</model>
